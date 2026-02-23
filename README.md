@@ -1,4 +1,4 @@
-# fitness-game
+# fitness-game-
 ## Overview
 The Fitness Game combines IoT technologies, wireless communication, and smart lighting to create a versatile and interactive agility training platform. Athletes can use this system to improve their reaction time, speed, coordination, and overall agility for various sports and physical activities.
 
