@@ -1,0 +1,25 @@
+# Codemagic Configuration for AppCode Project
+workflows:
+  android-workflow:
+    name: Android Build Workflow
+    max_build_duration: 30
+    instance_type: mac_mini_m1
+    environment:
+      flutter: stable
+      groups:
+        - keystore_credentials # اگر بعدا خواستی برای بازار/گوگل‌پلی امضا کنی
+    scripts:
+      - name: Get Flutter packages
+        script: |
+          flutter pub get
+      - name: Build APK with Flutter
+        script: |
+          flutter build apk --release --no-tree-shake-icons
+    artifacts:
+      - build/app/outputs/flutter-apk/*.apk
+    publishing:
+      email:
+        recipients:
+          - alireza1366rashidi@gmail.com # ایمیل خودت را اینجا بنویس
+
+
